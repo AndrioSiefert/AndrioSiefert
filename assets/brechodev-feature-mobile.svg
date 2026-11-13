@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="490" viewBox="0 0 480 490" role="img" aria-labelledby="title desc"><title id="title">Explore BrechoDev — my storefront and portfolio</title><desc id="desc">Explore BrechoDev — my storefront and portfolio</desc><defs>
+      <linearGradient id="feature" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#211A2B"/><stop offset="1" stop-color="#382638"/></linearGradient>
+      <linearGradient id="edge"><stop stop-color="#C5A0DB" stop-opacity="0"/><stop offset=".5" stop-color="#EBAAC7"/><stop offset="1" stop-color="#EAC4A8" stop-opacity="0"/></linearGradient>
+    </defs>
+    <style>
+      text{font-family:DejaVu Sans,Arial,sans-serif}
+      .packet{stroke-dasharray:5 95;stroke-dashoffset:100;animation:transmit 8s linear infinite}
+      .packet.delay{animation-delay:1s}
+      .orbital{transform-box:fill-box;transform-origin:center;animation:orbit 32s linear infinite}
+      .breathe{animation:breathe 8s ease-in-out infinite}
+      @keyframes transmit{to{stroke-dashoffset:-100}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){.packet,.orbital,.breathe{animation:none!important}.packet{stroke-dasharray:none;opacity:.3}}
+    </style><rect x="1" y="1" width="478" height="488" rx="16" fill="url(#feature)" stroke="#49394E"/><path d="M24 1h64" fill="none" stroke="#EBAAC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><circle cx="240" cy="365" r="107" fill="none" stroke="#644B69"/><g class="orbital" stroke="#B38EC4" fill="none" stroke-width="1.1" opacity=".65"><ellipse cx="240" cy="365" rx="91" ry="31.849999999999998" transform="rotate(-32 240 365)"/><ellipse cx="240" cy="365" rx="91" ry="31.849999999999998" transform="rotate(52 240 365)"/><path d="M240 274 298.24 365 240 456 181.76 365Z M240 274V456M181.76 365H298.24" fill="none" stroke="#C5A0DB" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" /></g><circle cx="240" cy="365" r="5" fill="#EBAAC7" class="breathe"/><text x="240" y="76" font-size="52" fill="#F5EAF1" font-weight="700" text-anchor="middle">brechó.dev</text><text x="240" y="117" font-size="23" fill="#EBAAC7" font-weight="400" text-anchor="middle">My corner of the internet.</text><text x="240" y="155" font-size="20" fill="#C0AEBD" font-weight="400" text-anchor="middle">Storefront, portfolio &amp; experiments.</text><rect x="94" y="191" width="292" height="48" rx="8" fill="#EBAAC7"/><text x="116" y="222" font-size="20" fill="#241A26" font-weight="600" text-anchor="start">Explore BrechoDev</text><path d="M349 222l14-14m-14 0h14v14" fill="none" stroke="#241A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>

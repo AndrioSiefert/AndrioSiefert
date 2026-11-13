@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="30" viewBox="0 0 480 30" role="img" aria-labelledby="title desc"><title id="title">Section divider</title><desc id="desc">Section divider</desc><defs>
+      <linearGradient id="feature" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#211A2B"/><stop offset="1" stop-color="#382638"/></linearGradient>
+      <linearGradient id="edge"><stop stop-color="#C5A0DB" stop-opacity="0"/><stop offset=".5" stop-color="#EBAAC7"/><stop offset="1" stop-color="#EAC4A8" stop-opacity="0"/></linearGradient>
+    </defs>
+    <style>
+      text{font-family:DejaVu Sans,Arial,sans-serif}
+      .packet{stroke-dasharray:5 95;stroke-dashoffset:100;animation:transmit 8s linear infinite}
+      .packet.delay{animation-delay:1s}
+      .orbital{transform-box:fill-box;transform-origin:center;animation:orbit 32s linear infinite}
+      .breathe{animation:breathe 8s ease-in-out infinite}
+      @keyframes transmit{to{stroke-dashoffset:-100}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){.packet,.orbital,.breathe{animation:none!important}.packet{stroke-dasharray:none;opacity:.3}}
+    </style><path d="M20 10H460" stroke="url(#edge)"/><path d="m240.0 0 10 10-10 10-10-10Z" fill="#211B29" stroke="#C5A0DB"/></svg>
