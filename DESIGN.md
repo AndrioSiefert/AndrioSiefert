@@ -4,7 +4,8 @@ The existing identity header, landscape animation, about section and social link
 
 ## Composition
 
-- Centered native headings introduce the stack, engineering practices and BrechoDev.
+- A dedicated AI feature leads the lower section, highlighting OpenAI/OpenRouter experience, multimodal pipelines and MCP agents. Its two capability lanes animate data flow and become vertically stacked on mobile.
+- Centered native headings introduce AI, the stack, engineering practices and BrechoDev.
 - Desktop stack: a tall languages panel beside two wider frontend/backend panels, followed by paired data/infrastructure panels and a full-width integration diagram.
 - Mobile uses dedicated, single-column SVG compositions, with languages in two columns. The breakpoint is 600px; never scale the desktop composition down to a phone.
 - Engineering is a connected horizontal diagram on desktop and a vertical diagram on mobile.
@@ -34,6 +35,10 @@ The diagrams illustrate areas of experience, not a specific production deploymen
 
 ## Maintenance
 
-Run `python3 scripts/build-profile.py` to regenerate the 12 responsive SVGs. The script uses only Python's standard library and reuses the embedded icon paths from the original `assets/stack-*.svg` files; their upstream sources are recorded in `icon-sources.json`. Keep those original files as source assets. New geometry is authored locally.
+Run `python3 scripts/build-profile.py` to regenerate the 14 responsive SVGs. The script uses only Python's standard library and reuses the embedded icon paths from the original `assets/stack-*.svg` files; their upstream sources are recorded in `icon-sources.json`. Keep those original files as source assets. New geometry is authored locally.
 
 `preview.html` is a local, animated rendering of the README with approximate GitHub styling. The published profile remains `README.md` plus `assets/`; no custom CSS from the preview is required. Validate changes at 1000px, 390px and 320px, including opened details and reduced motion.
+
+## AI content evidence
+
+AI copy is grounded in the supplied CV, the user’s stated OpenAI/OpenRouter experience and read-only inspection of `naMoska_AI` and `naMoska_Agent`. The current code uses OpenRouter via an OpenAI-compatible client; the profile describes broader provider experience without implying both gateways currently power those runtimes. Hermes is an integrated runtime, not an agent framework authored from scratch. No accuracy, cost-saving or production-readiness claims are made. Source mapping is in `docs/ai-profile-evidence.md`.

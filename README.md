@@ -35,6 +35,38 @@
 
 <br/>
 
+<h2 align="center">AI beyond the chat window.</h2>
+<p align="center">OpenAI and OpenRouter integrations, multimodal document pipelines and agents connected to real tools.</p>
+
+<br/>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/ai-engineering-mobile.svg" />
+  <img src="./assets/ai-engineering.svg" width="100%" alt="Applied AI: OpenAI and OpenRouter integrations. Multimodal image and PDF extraction, Pydantic and JSON Schema validation. Hermes agents with scoped MCP tools, human review and run isolation. Evaluation, token budgets and usage tracking." />
+</picture>
+
+<br/>
+
+<details>
+<summary><strong>Inside my AI work — documents, agents and reliable execution</strong></summary>
+
+<h4 align="center">OpenAI &amp; OpenRouter integrations</h4>
+<p align="center">Integration experience with OpenAI APIs and OpenRouter, combining Python/FastAPI services, typed contracts and structured model outputs.</p>
+
+<h4 align="center">Multimodal document pipelines</h4>
+<p align="center">In naMoska_AI, I build image and PDF extraction pipelines for purchase documents: image preparation, multi-page processing, JSON Schema/Pydantic validation and explicit uncertainty flags for human review.</p>
+
+<h4 align="center">Agents connected to business tools</h4>
+<p align="center">In naMoska_Agent, I integrate the Hermes runtime with scoped MCP tools for inventory, purchasing and production workflows. Run isolation and tool allowlists keep access bounded; people review and confirm changes in the application.</p>
+
+<h4 align="center">Evaluation, budgets &amp; observability</h4>
+<p align="center">Synthetic document tests, structured-output diagnostics, token budgets and per-execution usage tracking — including failed model calls and unknown costs.</p>
+
+</details>
+
+<br/>
+<br/>
+
 <h2 align="center">From interface to infrastructure.</h2>
 <p align="center">The tools I use to build web applications, connect systems and work with AI.</p>
 
@@ -42,7 +74,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/stack-core-mobile.svg" />
-  <img src="./assets/stack-core.svg" width="100%" alt="Languages: TypeScript, JavaScript, Python, Node.js, Bash, Java, PHP, pip. Frontend: React, Vite, Tailwind CSS, Next.js, TanStack Query, React Hook Form, Zod, Chart.js. Backend and AI: NestJS, FastAPI, OpenAI API, Express, n8n, TypeORM, AI agents, Multimodal AI." />
+  <img src="./assets/stack-core.svg" width="100%" alt="Languages: TypeScript, JavaScript, Python, Node.js, Bash, Java, PHP, pip. Frontend: React, Vite, Tailwind CSS, Next.js, TanStack Query, React Hook Form, Zod, Chart.js. Backend and AI: NestJS, FastAPI, OpenAI API, OpenRouter, Express, n8n, TypeORM, AI agents, Multimodal AI." />
 </picture>
 
 <br/>
@@ -73,7 +105,10 @@
 <p align="center">React · Vite · Tailwind CSS · TanStack Query · Next.js · React Hook Form · Zod · Chart.js</p>
 
 <h4 align="center">Backend &amp; AI</h4>
-<p align="center">NestJS · FastAPI · OpenAI API · n8n · Express · TypeORM · AI agents · Multimodal AI</p>
+<p align="center">NestJS · FastAPI · OpenAI API · OpenRouter · n8n · Express · TypeORM · AI agents · Multimodal AI</p>
+
+<h4 align="center">Applied AI</h4>
+<p align="center">Structured outputs · Pydantic · JSON Schema · Vision · PDF extraction · Hermes · MCP · Human review · Token budgets · Evaluation</p>
 
 <h4 align="center">Data &amp; messaging</h4>
 <p align="center">PostgreSQL · Redis · BullMQ · RabbitMQ · MinIO · Supabase · SQL · JSONB · MySQL · MongoDB</p>

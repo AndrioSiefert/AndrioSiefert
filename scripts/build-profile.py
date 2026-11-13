@@ -54,7 +54,7 @@ def logo_label(label, cx, y, color='rose', size=34, font=19):
 
 def save(name, w, h, title, content, description=''):
     # Paths and labels stay visible without animation or CSS support.
-    # Motion is confined to two small diagrams; reduced-motion keeps a static alternative.
+    # Motion is confined to small vector diagrams; reduced-motion keeps a static alternative.
     defs = '''<defs>
       <linearGradient id="feature" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#211A2B"/><stop offset="1" stop-color="#382638"/></linearGradient>
       <linearGradient id="edge"><stop stop-color="#C5A0DB" stop-opacity="0"/><stop offset=".5" stop-color="#EBAAC7"/><stop offset="1" stop-color="#EAC4A8" stop-opacity="0"/></linearGradient>
@@ -93,7 +93,7 @@ def core(mobile=False):
     s += text(28, lh-29, 'PHP · pip', 23 if mobile else 19, 'muted')
     for j, (title, color, logos, lines) in enumerate([
         ('Frontend & interfaces', 'lilac', ['React','Vite','Tailwind CSS'], ['Next.js · TanStack Query', 'React Hook Form · Zod · Chart.js']),
-        ('Backend & AI', 'rose', ['NestJS','FastAPI','OpenAI API'], ['Express · n8n · TypeORM', 'AI agents · Multimodal AI']),
+        ('Backend & AI', 'rose', ['NestJS','FastAPI','OpenAI API'], ['Express · n8n · TypeORM', 'OpenRouter · Multimodal AI']),
     ]):
         x, y, pw, ph = (0, 428+j*340, 480, 312) if mobile else (336, j*300, 624, 272)
         s += panel(x,y,pw,ph,color, '#1C1927' if j==0 else '#231A25')
@@ -105,7 +105,54 @@ def core(mobile=False):
         for k, line in enumerate(lines):
             s += text(x+pw/2,y+214+k*33,line,23 if mobile else 18,'muted',anchor='middle')
     save('stack-core'+('-mobile' if mobile else ''),w,h,'Languages, frontend and backend',s,
-         'TypeScript, JavaScript, Python, Node.js, Bash, Java, PHP, pip. React, Vite, Tailwind CSS, Next.js, TanStack Query, React Hook Form, Zod, Chart.js. NestJS, FastAPI, OpenAI API, Express, n8n, TypeORM, AI agents, Multimodal AI.')
+         'TypeScript, JavaScript, Python, Node.js, Bash, Java, PHP, pip. React, Vite, Tailwind CSS, Next.js, TanStack Query, React Hook Form, Zod, Chart.js. NestJS, FastAPI, OpenAI API, OpenRouter, Express, n8n, TypeORM, AI agents, Multimodal AI.')
+
+
+def ai_feature(mobile=False):
+    w, h = (480, 884) if mobile else (960, 490)
+    s = panel(0, 0, w, h, 'rose', 'url(#feature)')
+    # Provider names describe experience; the two lanes below describe capabilities,
+    # not an assertion that both gateways serve the same production deployment.
+    x1, x2 = (34, 252) if mobile else (145, 585)
+    s += icon('OpenAI API', x1, 35, 32, 'rose')
+    s += text(x1+44, 61, 'OpenAI', 28 if mobile else 32, weight=600)
+    # An authored routing symbol, not an imitation of the OpenRouter brand mark.
+    s += path(f'M{x2} 51h11m0 0 12-12m-12 12 12 12m-5-24h5v5m-5 19h5v-5', 'lilac', 2)
+    s += text(x2+35, 61, 'OpenRouter', 26 if mobile else 32, weight=600)
+    s += text(w/2, 108, 'Model APIs · Structured outputs', 22, 'muted', anchor='middle')
+    s += rule(28, 137, w-56)
+    if not mobile:
+        s += path('M480 168V382')
+    for i, (title, start, end, line1, line2, color) in enumerate([
+        ('Multimodal pipelines', 'Images + PDFs', 'Typed drafts', 'Pydantic · JSON Schema', 'Document extraction', 'rose'),
+        ('Tool-using agents', 'MCP tools', 'Human review', 'Hermes · Scoped tools', 'Run isolation', 'lilac'),
+    ]):
+        x, y = (0, 178+i*292) if mobile else (i*480, 184)
+        s += text(x+240, y+13, title, 28 if mobile else 27, weight=700, anchor='middle')
+        cy = y+88
+        route = f'M{x+151} {cy}H{x+329}'
+        s += path(route, '#80637F', 1.5)
+        s += path(route, color, 2.5, 'class="packet" pathLength="100"')
+        for cx in [x+120, x+360]:
+            s += f'<circle cx="{cx}" cy="{cy}" r="30" fill="#241E2C" stroke="{COLORS[color]}"/>'
+        if i == 0:
+            s += path(f'M{x+109} {cy-16}h14l10 10v22h-24Zm14 0v10h10m-19 6h14m-14 7h10', color, 1.6)
+            s += path(f'M{x+354} {cy-14}h-5v10l-4 4 4 4v10h5m12-28h5v10l4 4-4 4v10h-5', color, 1.8)
+        else:
+            s += icon('AI agents', x+103, cy-17, 34, color)
+            s += path(f'M{x+346} {cy}l9 9 19-20', color, 2)
+        s += text(x+120, cy+63, start, 23 if mobile else 20, anchor='middle')
+        s += text(x+360, cy+63, end, 23 if mobile else 20, anchor='middle')
+        s += text(x+240, cy+108, line1, 23 if mobile else 21, 'muted', anchor='middle')
+        s += text(x+240, cy+143, line2, 23 if mobile else 21, 'muted', anchor='middle')
+    s += rule(28, h-91 if mobile else h-57, w-56)
+    if mobile:
+        s += text(w/2, h-52, 'Evaluation · Token budgets', 23, 'peach', anchor='middle')
+        s += text(w/2, h-20, 'Usage tracking', 23, 'peach', anchor='middle')
+    else:
+        s += text(w/2, h-23, 'Evaluation · Token budgets · Usage tracking', 22, 'peach', anchor='middle')
+    save('ai-engineering'+('-mobile' if mobile else ''), w, h, 'Applied AI — OpenAI and OpenRouter', s,
+         'OpenAI and OpenRouter integration experience. Multimodal image and PDF extraction into typed drafts using Pydantic and JSON Schema. Hermes agents with scoped MCP tools, human review and run isolation. Evaluation, token budgets and usage tracking.')
 
 
 def systems(mobile=False):
@@ -231,10 +278,11 @@ def signoff(mobile=False):
 
 
 for mobile in [False,True]:
+    ai_feature(mobile)
     core(mobile)
     systems(mobile)
     network(mobile)
     engineering(mobile)
     feature(mobile)
     signoff(mobile)
-print('Built 12 responsive SVG assets.')
+print('Built 14 responsive SVG assets.')
